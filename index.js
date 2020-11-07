@@ -8,19 +8,6 @@ const input = prompt.question(
   `${playerSelect} Are you ready to battle your first opponenet?: Type Yes:\n`
 );
 
-// function restart() {
-//   const letsPlay = prompt.keyInSelect(
-//     ["Yes", "No"],
-//     "do you want to play again?"
-//   );
-//   if (letsPlay === 0) {
-//     console.log("A brave choice..");
-//   } else {
-//     console.log("Oh well.. Maybe next time.");
-//     process.exit();
-//   }
-// }
-
 if (input.toLowerCase() === "yes") {
   let userWins = 0;
   let maxRounds = 0;
@@ -68,11 +55,11 @@ if (input.toLowerCase() === "yes") {
       console.log(
         `You Lose!,You used ${playerInput} and your opponent used ${opponent}`
       );
+      maxRounds++;
+      losses++;
       console.log(`Total user wins = ${userWins}`);
       console.log(`Total user losses = ${losses}`);
       console.log(`Rounds = ${maxRounds}`);
-      maxRounds++;
-      losses++;
     }
   }
 }
